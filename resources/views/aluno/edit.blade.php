@@ -36,7 +36,9 @@
         </div>
 
         <!-- BOTAO CANCELAR -->
-        <button onclick="window.location.href='{{ route('aluno.index') }}'" class="btn btn-danger">Cancelar</button>
+        <button class="btn btn-danger">
+            <a style="text-decoration: inherit; color: inherit;" href="{{ route('aluno.index') }}">Cancelar</a>
+        </button>
         <!-- BOTAO CADASTRAR -->
         <button type="submit" class="btn btn-success">Salvar</button>
 
