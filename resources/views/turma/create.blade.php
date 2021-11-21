@@ -2,7 +2,9 @@
 
 @section('content')
     
-    <h1 class="mt-5">Adicionando nova turma</h1>
+    <h1 class="mt-5">Adicionando nova turma
+        <button class="btn btn-secundary" onclick="window.location.href='{{ route('turma.index') }}'">Voltar</button>
+    </h1>
 
     <!-- INICIO FORMULARIO -->
     <form action="{{ route('turma.store') }}" method="POST">

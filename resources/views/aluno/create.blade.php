@@ -2,7 +2,9 @@
 
 @section('content')
     
-    <h1 class="mt-5">Adicionando novo aluno</h1>
+    <h1 class="mt-5">Adicionando novo aluno
+        <button class="btn btn-secundary" onclick="window.location.href='{{ route('aluno.index') }}'">Voltar</button>
+    </h1>
 
     <!-- INICIO FORMULARIO -->
     <form action="{{ route('aluno.store') }}" method="POST">
