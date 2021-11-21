@@ -15,9 +15,9 @@ class CreateAlunosTable extends Migration
     {
         Schema::create('alunos', function (Blueprint $table) {
             $table->id();
-            $table->string('nome_aluno',64);
+            $table->string('nome_aluno', 64);
             $table->date('nascimento_aluno');
-            $table->string('ra_aluno',64);
+            $table->string('ra_aluno', 64);
             $table->foreignId('turma_id')->constrained();
             $table->timestamps();
         });
