@@ -39,7 +39,7 @@
                     <td>{{ $a->nome_aluno }}</td>
                     <td>{{ $a->nascimento_aluno }}</td>
                     <td>{{ $a->ra_aluno }}</td>
-                    <td></td>
+                    <td>{{ $a->turma->nome_turma }}</td>
                     <td>
                         <center>
                             <div class="btn-group" role="group" aria-label="Basic example">

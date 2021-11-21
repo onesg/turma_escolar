@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <!-- BOTAO LIMPAR -->
+        <!-- BOTAO CANCELAR -->
         <button onclick="window.location.href='{{ route('turma.index') }}'" class="btn btn-danger">Cancelar</button>
         <!-- BOTAO CADASTRAR -->
         <button type="submit" class="btn btn-success">Salvar</button>

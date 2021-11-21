@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Aluno;
+use App\Models\Turma;
 use Illuminate\Http\Request;
+
+// ARRUMAR STORE E UPDATE
 
 class AlunoController extends Controller
 {
@@ -29,7 +32,12 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        return view('turma.create');
+        if(Turma::count() != 0){
+            $turmas = Turma::orderBy('nome_turma')->get();
+        }else{
+            $turmas = null;
+        }
+        return view('aluno.create')->with('turmas', $turmas);
     }
 
     /**
@@ -40,7 +48,13 @@ class AlunoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $a = new Aluno();
+        $a->nome_aluno = $request->input('form_nome_aluno');
+        $a->nascimento_aluno = $request->input('form_data_aluno');
+        $a->ra_aluno = $request->input('form_ra_aluno');
+        $a->turma_id = $request->input('form_turma_aluno');
+        $a->save();
+        return redirect(route('aluno.index'));
     }
 
     /**
@@ -68,7 +82,8 @@ class AlunoController extends Controller
     public function edit($id)
     {
         $aluno = Aluno::find($id);
-        return view('aluno.edit')->with('aluno', $aluno);
+        $turmas = Turma::orderBy('nome_turma')->orWhere('nome_turma','!=',$aluno->turma->nome_turma)->get();
+        return view('aluno.edit')->with(['aluno' => $aluno, 'turmas' => $turmas]);
     }
 
     /**
@@ -80,7 +95,13 @@ class AlunoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $aluno = Aluno::find($id);
+        $aluno->nome_aluno = $request->input('form_nome_aluno');
+        $aluno->nascimento_aluno = $request->input('form_data_aluno');
+        $aluno->ra_aluno = $request->input('form_ra_aluno');
+        $aluno->turma_id = $request->input('form_turma_aluno');
+        $aluno->save();
+        return redirect(route('aluno.index')); 
     }
 
     /**
@@ -96,3 +117,10 @@ class AlunoController extends Controller
         return redirect(route('aluno.index'));
     }
 }
+
+/*
+    form_nome_aluno
+    form_data_aluno
+    form_ra_aluno
+    form_turma_aluno
+*/
