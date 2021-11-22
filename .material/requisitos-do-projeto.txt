@@ -1,0 +1,21 @@
+Esse projeto terá peso 5,0, pois irá determinar a nota do aluno no segundo bimestre. 
+
+O aluno deverá desenvolver um sistema baseado no framework Laravel com os seguintes requisitos:
+
+ Controle de acesso (login);
+	
+ Duas tabelas relacionadas (1:N);
+	
+ Dois CRUDs;
+	
+ As views de listagem (index) deverão permitir a realização de consultas personalizadas, inclusive com paginação de resultados;
+	
+ Layout ou template utilizando o Bootstrap ou outro framework front-end;
+	
+ Pelo menos um relatório (a confirmar)
+
+O trabalho é individual, ou seja, cada aluno deverá criar seu próprio projeto. 
+
+A data de entrega e apresentação ainda será definida.
+
+Cada aluno deverá comentar aqui o tema do projeto, enfatizando os relacionamentos. Não aceitarei propostas idênticas!

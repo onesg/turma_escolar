@@ -1,0 +1,3 @@
+Banco de dados: POSTGRESQL
+Nome do banco de dados: turma_escolar
+Tabelas: <criadas automaticamente com as migrates>
