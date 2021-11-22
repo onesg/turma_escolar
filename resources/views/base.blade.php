@@ -16,7 +16,7 @@
     <!-- TITULO -->
     <title>{{ env('APP_NAME') }}</title>
 </head>
-<body>
+<body style="background-color: #FAFAFA">
 
     <!-- INICIO HEADER -->
     <header>
@@ -34,7 +34,13 @@
                 <ul class="navbar-nav mr-auto">
                     <!-- ITEM INICIO -->
                     <li class="nav-item"><!-- nav-item active -->
-                        <a class="nav-link" href="{{ route('turma.index') }}">Inicio</a>
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item"><!-- nav-item active -->
+                        <a class="nav-link" href="{{ route('turma.index') }}">Turmas</a>
+                    </li>
+                    <li class="nav-item"><!-- nav-item active -->
+                        <a class="nav-link" href="{{ route('aluno.index') }}">Alunos</a>
                     </li>
                 </ul>
                 <!-- FIM LISTA DE ITENS -->
@@ -62,7 +68,7 @@
     <!-- FIM CONTEUDO PRINCIPAL -->
     <br>
     <!-- INICIO FOOTER -->
-    <footer class="footer">
+    <footer class="footer" style="background-color: #DEDEDE">
         <div class="container">
             <a href="https://github.com/onesg" target="_blank" style="text-decoration: inherit; color: inherit;" data-toggle="tooltip" data-placement="top" title="Não clique em mim >:)">
                 <span class="text-muted">
