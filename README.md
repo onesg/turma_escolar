@@ -17,7 +17,7 @@
  - O projeto está pronto ;)
 ---
 ##### STATUS DO PROJETO: #####
- - [ ] Controle de acesso (página de login)
+ - [x] Controle de acesso (página de login)
  - [ ] Página principal
  - [x] CRUD das Turmas
  - [x] CRUD dos Alunos

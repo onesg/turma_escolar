@@ -34,7 +34,7 @@
                 <ul class="navbar-nav mr-auto">
                     <!-- ITEM INICIO -->
                     <li class="nav-item"><!-- nav-item active -->
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link" href="{{ route('home') }}">Inicio</a>
                     </li>
                     <li class="nav-item"><!-- nav-item active -->
                         <a class="nav-link" href="{{ route('turma.index') }}">Turmas</a>
