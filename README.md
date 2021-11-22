@@ -23,7 +23,7 @@
  - [x] CRUD dos Alunos
  - [x] Relacionamento 1:N (1 turma possui N alunos)
  - [x] Layout com bootstrap
- - [ ] Paginação
+ - [x] Paginação
  - [ ] Relatórios (opcional)
 ---
 #### Bugs encontrados e correções ####

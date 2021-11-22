@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 
 class AlunoController extends Controller
 {
+
+    //  TOTAL DE REGISTROS QUE SERAO EXIBIDOS
+    private $totalPage = 5;
+
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +22,8 @@ class AlunoController extends Controller
     public function index()
     {
         if(Aluno::count() != 0){
-            $alunos = Aluno::orderBy('nome_aluno')->get();
+            //$alunos = Aluno::orderBy('nome_aluno')->get();
+            $alunos = Aluno::orderBy('nome_aluno')->paginate($this->totalPage);
         }else{
             $alunos = null;
         }

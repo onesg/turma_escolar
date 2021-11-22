@@ -13,6 +13,9 @@ class TurmaController extends Controller
 
     }
 
+    //  TOTAL DE REGISTROS QUE SERAO EXIBIDOS
+    private $totalPage = 5;
+
     /**
      * Display a listing of the resource.
      *
@@ -21,7 +24,8 @@ class TurmaController extends Controller
     public function index()
     {
         if(Turma::count() != 0){
-            $turmas = Turma::orderBy('nome_turma')->get();
+            //$turmas = Turma::orderBy('nome_turma')->get();
+            $turmas = Turma::orderBy('nome_turma')->paginate($this->totalPage);
         }else{
             $turmas = null;
         }
